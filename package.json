@@ -6,15 +6,12 @@
   "author": "SUYEON KIM <yeonee230@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@babel/core": "^7.21.3",
-    "@babel/preset-env": "^7.20.2",
-    "@babel/register": "^7.21.0",
-    "del": "^7.0.0",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^8.0.0",
-    "gulp-csso": "^4.0.1",
-    "gulp-sass": "^5.1.0",
-    "node-sass": "^8.0.0"
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/register": "^7.4.4",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-csso": "^3.0.1",
+    "sass": "^1.60.0"
   },
   "scripts": {
     "dev": "gulp dev"
@@ -23,5 +20,10 @@
     "browsers": [
       "last 2 versions"
     ]
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "node-sass": "^8.0.0"
   }
 }

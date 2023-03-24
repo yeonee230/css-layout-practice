@@ -1,16 +1,16 @@
 import gulp from "gulp";
 // import del from "del";
-import sass from "gulp-sass";
+
 import minify from "gulp-csso";
 import autoprefixer from "gulp-autoprefixer";
 
-sass.compiler = require("node-sass");
+const sass = require("gulp-sass")(require('sass'));
 
 const routes = {
   css: {
     watch: "src/scss/*",
     src: "src/scss/styles.scss",
-    dest: "dest/css"
+    dest: "dist/css"
   }
 };
 
@@ -31,12 +31,13 @@ const watch = () => {
   gulp.watch(routes.css.watch, styles);
 };
 
-// const clean = () => del(["dest/"]);
+// const clean = () => del(["dist/styles.css"]);
 
-const prepare = gulp.series([clean]);
+// const prepare = gulp.series([clean]);
 
 const assets = gulp.series([styles]);
 
 const live = gulp.parallel([watch]);
 
-export const dev = gulp.series([prepare, assets, live]);
+// export const dev = gulp.series([prepare, assets, live]);
+export const dev = gulp.series([ assets, live]);
